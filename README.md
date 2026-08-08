@@ -1,59 +1,118 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# SkillHub
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Plataforma web para la gestión y reserva de clases de habilidades
 
-## About Laravel
+SkillHub es una aplicación web desarrollada con Laravel que permite a los usuarios consultar diferentes clases de habilidades, revisar sus horarios disponibles y realizar reservas.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+El proyecto está enfocado en facilitar la gestión de clases y reservas mediante una plataforma web sencilla, organizada y fácil de utilizar.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Además, cuenta con una API para la gestión de reservas y agenda, la cual puede ser probada mediante Thunder Client desde Visual Studio Code.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## Temática del proyecto
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+**Clases de Habilidades**
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+SkillHub permite publicar y consultar clases relacionadas con diferentes áreas de conocimiento, por ejemplo:
 
-## Laravel Sponsors
+- Programación
+- Bases de datos
+- Ciberseguridad
+- Desarrollo web
+- Diseño
+- Otras habilidades profesionales
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+---
 
-### Premium Partners
+# Funcionalidades
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## Usuarios
 
-## Contributing
+El sistema permite:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- Registro de usuarios.
+- Inicio de sesión.
+- Cierre de sesión.
+- Actualización del perfil.
+- Cambio de contraseña.
+- Eliminación de cuenta.
 
-## Code of Conduct
+---
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Clases
 
-## Security Vulnerabilities
+Los usuarios pueden consultar las clases disponibles.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Cada clase contiene información como:
 
-## License
+- Nombre.
+- Descripción.
+- Categoría.
+- Nivel.
+- Instructor.
+- Duración.
+- Costo.
+- Ubicación.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+También se cuenta con un filtro por ubicación para facilitar la búsqueda de clases.
+
+---
+
+## Horarios
+
+Las clases cuentan con horarios definidos que pueden estar disponibles para realizar una reserva.
+
+Cada horario contiene:
+
+- Fecha.
+- Hora de inicio.
+- Hora de finalización.
+- Lugares disponibles.
+
+---
+
+## Reservas
+
+Los usuarios pueden:
+
+- Consultar sus reservas.
+- Reservar una clase.
+- Consultar el estado de una reserva.
+- Cancelar una reserva.
+
+---
+
+## Historial
+
+El sistema permite consultar el historial de reservas del usuario.
+
+En esta sección pueden visualizarse las reservas que hayan sido canceladas o que formen parte del historial del usuario.
+
+---
+
+# Filtro por ubicación
+
+SkillHub cuenta con un filtro para buscar clases de acuerdo con su ubicación.
+
+El usuario puede:
+
+1. Entrar a la sección **Clases**.
+2. Seleccionar una ubicación.
+3. Presionar **Filtrar**.
+4. Consultar únicamente las clases disponibles en esa ubicación.
+
+También existe una opción para limpiar el filtro y volver a mostrar todas las clases.
+
+---
+
+# API
+
+SkillHub cuenta con una API REST enfocada en la gestión de reservas y agenda.
+
+La API permite realizar operaciones mediante solicitudes HTTP y puede ser utilizada posteriormente por otras aplicaciones, como aplicaciones móviles o sistemas externos.
+
+## URL base
+
+```text
+http://127.0.0.1:8000/api
